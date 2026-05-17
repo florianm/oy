@@ -1,0 +1,51 @@
+{
+  "name": "dataunit-audits",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+   "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers-extra/features/aws-cdk:2": {},
+    "ghcr.io/guiyomh/features/just:0": {},
+    "ghcr.io/warrenbuckley/codespace-features/sqlite:1": {},
+    "ghcr.io/devcontainers/features/terraform:1": {}
+  },
+  "remoteUser": "vscode",
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb"
+  },
+  "containerEnv": {
+    "DISPLAY": "oy-cli",
+    "PYTHONUNBUFFERED": "True",
+    "UV_LINK_MODE": "copy",
+    "UV_PROJECT_ENVIRONMENT": ".venv"
+  },
+  "customizations": {
+     "codespaces": {
+      "openFiles": ["README.md"]
+    },
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.terminal.activateEnvInCurrentTerminal": true,
+        "python.defaultInterpreterPath": ".venv/bin/python3",
+        "python.pythonPath": ".venv/bin/python3",
+        "aws.telemetry": false
+      },
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "tamasfe.even-better-toml",
+        "ms-azuretools.vscode-docker",
+        "nefrob.vscode-just-syntax",
+        "ms-python.python",
+        "github.copilot",
+        "DavidAnson.vscode-markdownlint",
+        "github.vscode-github-actions"
+      ]
+    }
+  }
+}
