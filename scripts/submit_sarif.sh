@@ -4,7 +4,7 @@ OWNER="florianm"
 REPO="SETME"
 BRANCH="main"
 REF="refs/heads/$BRANCH"
-SARIF_PATH="/workspaces/oy/src/OWNER/REPO/REPORT.sarif"
+SARIF_PATH="/workspaces/oy/src/$OWNER/$REPO/REPORT.sarif"
 
 if [[ ! -f "$SARIF_PATH" ]]; then
   echo "SARIF file not found: $SARIF_PATH" >&2

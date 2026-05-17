@@ -14,7 +14,6 @@ To conduct an automated security audit of a given repository:
   conduct a security audit:
 
   ```
-  cd src
   unzip src/<REPO>.zip
   cd REPO
   oy audit "security and compliance" --out <YYYY-MM-DD>_ISSUES_<REPO>.md
