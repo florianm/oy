@@ -8,7 +8,7 @@ ENV LC_ALL en_US.UTF-8
 
 RUN apt-get update  \
     && apt-get -y --no-install-recommends install  \
-        sudo curl git ca-certificates build-essential openssh-client wget locales \
+        sudo curl git git-lfs ca-certificates build-essential openssh-client wget locales \
     && sed -i '/^# *en_US.UTF-8 UTF-8/s/^# *//' /etc/locale.gen \
     && locale-gen en_US.UTF-8 \
     && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 \
