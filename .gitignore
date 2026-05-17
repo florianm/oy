@@ -219,3 +219,6 @@ __marimo__/
 
 # target code
 /src
+
+# findings
+/findings
